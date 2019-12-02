@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\posgrad\Desktop\Datasets\BradescoAgenciasCE.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>BradescoAgenciasCE.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="AddressStreet" size="255" source="Formula: Left([Address1],[CommaPos])" type="V_WString" />
+            <Field name="AddressNumber1" size="64" source="Formula: Left([AddressNumber],&#xA;     IIF(FindString(Trim([AddressNumber]),' ')==0,Length([AddressNumber]),FindString([AddressNumber],' ')))" type="V_String" />
+            <Field name="District" size="64" source="Formula: [Bairro]" type="V_String" />
+            <Field name="City" size="64" source="Formula: [Município]" type="V_String" />
+            <Field name="State" size="2" source="Formula: [Estado]" type="String" />
+            <Field name="ZipCode" size="11" source="Formula: Replace(Replace([CEP],'.',''),'-','')" type="V_String" />
+            <Field name="House Number (TT)" size="50" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="Street (TT)" size="150" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="City (TT)" size="50" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="State (TT)" size="50" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="Country (TT)" size="50" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="ISO3 (TT)" size="25" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="Postal Code (TT)" size="25" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="AddressFull (TT)" size="250" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="GeoLevel" size="50" source="Formula: IF &#xA;IsEmpty([_type_]) THEN &#xA;  'Not Coded' &#xA;ELSE &#xA;  [GeoLevel] &#xA;ENDIF" type="V_String" />
+            <Field name="Lat" source="Formula: IF &#xA;IsEmpty([_type_]) THEN &#xA;  Null() &#xA;ELSE &#xA;  [Lat] &#xA;ENDIF" type="Double" />
+            <Field name="Lon" source="Formula: IF &#xA;IsEmpty([_type_]) THEN &#xA;  Null() &#xA;ELSE &#xA;  [Lon] &#xA;ENDIF" type="Double" />
+            <Field name="Bank ID" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Bank Name" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Branch Name" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Endereço" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Número" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Complemento" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Bairro" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="CEP" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Município" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Estado" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Address1" size="64" source="Formula: [Endereço]" type="V_WString" />
+            <Field name="Address2" size="64" source="Formula: [Complemento]" type="V_String" />
+            <Field name="CommaPos" source="Formula: IIF(FindString([Address1],',')&gt;0,&#xA;    FindString([Address1],','),&#xA;    Length([Address1]))" type="Int16" />
+            <Field name="AddressNumber" size="64" source="Formula: IIF(FindString([Address1],',')&gt;0,&#xA;    Trim(Right([Address1],Length([Address1])-FindString([Address1],',')-1)),Null())" type="V_String" />
+            <Field name="SpatialObj" size="2147483647" source="Formula: IF &#xA;IsEmpty([_type_]) THEN &#xA;  ST_CreatePoint(Null(),Null())&#xA;ELSE &#xA;  ST_CreatePoint([Lon],[Lat]) &#xA;ENDIF" type="SpatialObj" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="690" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\posgrad\AppData\Local\Temp\Engine_11820_fa2f53ff23994f8d9deae4bddee315a7_\Engine_1152_30d74ae640eb46a89566d76f1ac4acdb_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="234" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>Trim(Uppercase([City])) = Uppercase("Fortaleza")</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Trim(Uppercase([City])) = Uppercase("Fortaleza")</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="438" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="City" selected="True" />
+            <SelectField field="State" selected="True" />
+            <SelectField field="ZipCode" selected="True" />
+            <SelectField field="Country (TT)" selected="True" />
+            <SelectField field="Endereço" selected="True" />
+            <SelectField field="Complemento" selected="True" />
+            <SelectField field="Bairro" selected="True" />
+            <SelectField field="CEP" selected="True" />
+            <SelectField field="Município" selected="True" />
+            <SelectField field="Estado" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Bradesco_Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

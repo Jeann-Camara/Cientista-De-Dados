@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.3">
+  <Nodes>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="6" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Endereço" />
+            <Field name="Latitude" />
+            <Field name="Longitude" />
+          </Fields>
+          <Data>
+            <r>
+              <c>UNI7</c>
+              <c>-3.7709474!4d</c>
+              <c>-38.4834318</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+        <Position x="90" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields fieldX="Longitude" fieldY="Latitude" />
+          <Mode>Double</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="666" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\posgrad\AppData\Local\Temp\Engine_12616_6a2ce687aa2040908e0ba432bc511670_\Engine_6260_99ef6e96205a4eb7a5f18b3ca010c12e_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Map</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>Latest:CloudMade</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="6" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\posgrad\Downloads\Turma201803\Tools\Alteryx\Datasets\BradescoAgenciasCE.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>BradescoAgenciasCE.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="AddressStreet" size="255" source="Formula: Left([Address1],[CommaPos])" type="V_WString" />
+            <Field name="AddressNumber1" size="64" source="Formula: Left([AddressNumber],&#xA;     IIF(FindString(Trim([AddressNumber]),' ')==0,Length([AddressNumber]),FindString([AddressNumber],' ')))" type="V_String" />
+            <Field name="District" size="64" source="Formula: [Bairro]" type="V_String" />
+            <Field name="City" size="64" source="Formula: [Município]" type="V_String" />
+            <Field name="State" size="2" source="Formula: [Estado]" type="String" />
+            <Field name="ZipCode" size="11" source="Formula: Replace(Replace([CEP],'.',''),'-','')" type="V_String" />
+            <Field name="House Number (TT)" size="50" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="Street (TT)" size="150" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="City (TT)" size="50" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="State (TT)" size="50" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="Country (TT)" size="50" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="ISO3 (TT)" size="25" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="Postal Code (TT)" size="25" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="AddressFull (TT)" size="250" source="File: C:\Alteryx\POC\Alteryx_Geocorder\Databases\BradescoAgenciasR1.yxdb" type="V_String" />
+            <Field name="GeoLevel" size="50" source="Formula: IF &#xA;IsEmpty([_type_]) THEN &#xA;  'Not Coded' &#xA;ELSE &#xA;  [GeoLevel] &#xA;ENDIF" type="V_String" />
+            <Field name="Lat" source="Formula: IF &#xA;IsEmpty([_type_]) THEN &#xA;  Null() &#xA;ELSE &#xA;  [Lat] &#xA;ENDIF" type="Double" />
+            <Field name="Lon" source="Formula: IF &#xA;IsEmpty([_type_]) THEN &#xA;  Null() &#xA;ELSE &#xA;  [Lon] &#xA;ENDIF" type="Double" />
+            <Field name="Bank ID" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Bank Name" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Branch Name" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Endereço" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Número" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Complemento" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Bairro" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="CEP" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Município" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Estado" size="255" source="File: C:\Alteryx\POC\Alteryx_Geocorder\201404AGENCIAS.xls|`Plan1$`" type="V_WString" />
+            <Field name="Address1" size="64" source="Formula: [Endereço]" type="V_WString" />
+            <Field name="Address2" size="64" source="Formula: [Complemento]" type="V_String" />
+            <Field name="CommaPos" source="Formula: IIF(FindString([Address1],',')&gt;0,&#xA;    FindString([Address1],','),&#xA;    Length([Address1]))" type="Int16" />
+            <Field name="AddressNumber" size="64" source="Formula: IIF(FindString([Address1],',')&gt;0,&#xA;    Trim(Right([Address1],Length([Address1])-FindString([Address1],',')-1)),Null())" type="V_String" />
+            <Field name="SpatialObj" size="2147483647" source="Formula: IF &#xA;IsEmpty([_type_]) THEN &#xA;  ST_CreatePoint(Null(),Null())&#xA;ELSE &#xA;  ST_CreatePoint([Lon],[Lat]) &#xA;ENDIF" type="SpatialObj" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="666" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\posgrad\AppData\Local\Temp\Engine_12616_6a2ce687aa2040908e0ba432bc511670_\Engine_6260_0c855de13738444998b3a34151cc335c_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Map</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>Latest:CloudMade</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="186" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_Endereço" selected="True" rename="Source_Endereço" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Distance.Distance">
+        <Position x="246" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OutputDistance value="True" />
+          <ReturnNearest value="False" />
+          <DistToInsideEdge value="False" />
+          <OutputDriveTimeAndDistance value="False" />
+          <SpatialObjSource>Centroid</SpatialObjSource>
+          <SpatialObjDest>Centroid</SpatialObjDest>
+          <DriveTimeDataSet>Latest</DriveTimeDataSet>
+          <AllowReverseRoute value="True" />
+          <MaxDriveTime value="30" />
+          <DriveDistanceOnly value="False" />
+          <OutputCardinalDirection value="True" />
+          <OutputDirectionDegrees value="False" />
+          <IsMetric value="True" />
+          <OutputUnits>Kilometers</OutputUnits>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxDistance" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="354" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="DistanceKilometers" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DistanceKilometers - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="570" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields orderChanged="False" />
+          <Mode>First</Mode>
+          <N>10</N>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 10</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="462" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>DistanceKilometers</Field>
+            <Operator>IsNotNull</Operator>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([DistanceKilometers])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="13" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="13" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="True" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Bradesco_Top10_Por_Endereço_Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

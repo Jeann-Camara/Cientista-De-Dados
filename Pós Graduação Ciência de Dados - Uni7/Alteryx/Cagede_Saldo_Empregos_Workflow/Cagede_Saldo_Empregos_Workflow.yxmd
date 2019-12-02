@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="-6" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\posgrad\Downloads\Turma201803\Tools\Alteryx\Datasets\CAGED201505CE.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>CAGED201505CE.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Código" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="Double" />
+            <Field name="Municípios" size="32" source="Formula: DecomposeUnicodeForMatch([Municípios])" type="V_String" />
+            <Field name="UF" size="2" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="String" />
+            <Field name="PIB" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="Double" />
+            <Field name="População" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="Double" />
+            <Field name="UFCod" size="2" source="Formula: Left(Trim(ToString([Código])),2)" type="String" />
+            <Field name="CódigoMun" source="Formula: ToNumber(Left(Trim(ToString([Código])),6))" type="Double" />
+            <Field name="Right_Código" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="Double" />
+            <Field name="Right_Municípios" size="32" source="Formula: DecomposeUnicodeForMatch([Municípios])" type="V_String" />
+            <Field name="Right_UF" size="2" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="String" />
+            <Field name="Right_UFCod" size="2" source="Formula: Left(Trim(ToString([Código])),2)" type="String" />
+            <Field name="Right_CódigoMun" source="Formula: ToNumber(Left(Trim(ToString([Código])),6))" type="Double" />
+            <Field name="Admitidos/Desligados" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Competência Declarada" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int32" />
+            <Field name="Município" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int32" />
+            <Field name="Ano Declarado" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int16" />
+            <Field name="CBO 2002 Ocupação" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int32" />
+            <Field name="CNAE 1.0 Classe" size="5" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="CNAE 2.0 Classe" size="5" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="CNAE 2.0 Subclas" size="7" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Faixa Empr Início Jan" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Grau Instrução" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Qtd Hora Contrat" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="IBGE Subsetor" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="Idade" size="3" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Ind Aprendiz" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="Ind Portador Defic" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="Raça Cor" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Salário Mensal" size="9" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Saldo Mov" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Sexo" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Tempo Emprego" size="6" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Tipo Estab" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Tipo Defic" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Tipo Mov Desagregado" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Right_UF2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="Bairros SP" size="4" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Bairros Fortaleza" size="4" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Bairros RJ" size="4" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Distritos SP" size="4" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Regiões Adm DF" size="4" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Mesorregião" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int16" />
+            <Field name="Microrregião" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int32" />
+            <Field name="Região Adm RJ" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Região Adm SP" size="3" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Região Corede" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Região Corede 04" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Região Gov SP" size="3" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Região Senac PR" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Região Senai PR" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Região Senai SP" size="3" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Sub-Região Senai PR" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="InstruçãoCódigo" source="Formula: ToNumber([Grau Instrução])" type="Int16" />
+            <Field name="IBGESubsetorCodStr" size="2" source="Formula: PadLeft(ToString([IBGE Subsetor]),2,'0')" type="String" />
+            <Field name="IdadeN" size="3" source="Formula: ToNumber([Idade])" type="String" />
+            <Field name="SalárioMensalN" source="Formula: ToNumber(Replace([Salário Mensal],',','.'))" type="Double" />
+            <Field name="TempoEmpregoN" source="Formula: ToNumber(Replace([Tempo Emprego],',','.'))" type="Double" />
+            <Field name="InstruçãoDesc" size="23" source="TextInput:" type="V_String" />
+            <Field name="FaixaEmprDesc" size="12" source="TextInput:" type="String" />
+            <Field name="MotivoDesc" size="43" source="Formula: DecomposeUnicodeForMatch([MotivoDesc])" type="V_String" />
+            <Field name="IBGESubsetorDesc" size="67" source="Formula: DecomposeUnicodeForMatch([IBGESubsetorDesc])" type="V_String" />
+            <Field name="RaçaCorDesc" size="9" source="Formula: DecomposeUnicodeForMatch([RaçaCorDesc])" type="String" />
+            <Field name="SexoDesc" size="9" source="Formula: IIF([Sexo]=='01','Masculino','Feminino')" type="String" />
+            <Field name="TipoMov" size="8" source="Formula: IIF([Admitidos/Desligados]=='01','Admitido','Demitido')" type="String" />
+            <Field name="InstruçãoDesc2" size="23" source="TextInput:" type="V_String" />
+            <Field name="FaixaEmprDesc2" size="12" source="TextInput:" type="String" />
+            <Field name="MotivoDesc2" size="43" source="TextInput:" type="V_String" />
+            <Field name="IBGESubsetorDesc2" size="67" source="TextInput:" type="V_String" />
+            <Field name="RaçaCorDesc2" size="9" source="TextInput:" type="String" />
+            <Field name="BairroFORCodigo" source="Formula: ToNumber([Bairros Fortaleza])" type="Int32" />
+            <Field name="Descrição" size="26" source="TextInput:" type="V_String" />
+            <Field name="Valor na Fonte" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="114" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Municípios" selected="True" />
+            <Field field="UF" selected="True" />
+            <Field field="UFCod" selected="True" />
+            <Field field="Right_Municípios" selected="True" />
+            <Field field="Right_UF" selected="True" />
+            <Field field="Right_UFCod" selected="True" />
+            <Field field="Admitidos/Desligados" selected="True" />
+            <Field field="CNAE 1.0 Classe" selected="True" />
+            <Field field="CNAE 2.0 Classe" selected="True" />
+            <Field field="CNAE 2.0 Subclas" selected="True" />
+            <Field field="Faixa Empr Início Jan" selected="True" />
+            <Field field="Grau Instrução" selected="True" />
+            <Field field="Qtd Hora Contrat" selected="True" />
+            <Field field="Idade" selected="True" />
+            <Field field="Raça Cor" selected="True" />
+            <Field field="Salário Mensal" selected="True" />
+            <Field field="Saldo Mov" selected="True" />
+            <Field field="Sexo" selected="True" />
+            <Field field="Tempo Emprego" selected="True" />
+            <Field field="Tipo Estab" selected="True" />
+            <Field field="Tipo Defic" selected="True" />
+            <Field field="Tipo Mov Desagregado" selected="True" />
+            <Field field="Bairros SP" selected="True" />
+            <Field field="Bairros Fortaleza" selected="True" />
+            <Field field="Bairros RJ" selected="True" />
+            <Field field="Distritos SP" selected="True" />
+            <Field field="Regiões Adm DF" selected="True" />
+            <Field field="Região Adm RJ" selected="True" />
+            <Field field="Região Adm SP" selected="True" />
+            <Field field="Região Corede" selected="True" />
+            <Field field="Região Corede 04" selected="True" />
+            <Field field="Região Gov SP" selected="True" />
+            <Field field="Região Senac PR" selected="True" />
+            <Field field="Região Senai PR" selected="True" />
+            <Field field="Região Senai SP" selected="True" />
+            <Field field="Sub-Região Senai PR" selected="True" />
+            <Field field="IBGESubsetorCodStr" selected="True" />
+            <Field field="IdadeN" selected="True" />
+            <Field field="InstruçãoDesc" selected="True" />
+            <Field field="FaixaEmprDesc" selected="True" />
+            <Field field="MotivoDesc" selected="True" />
+            <Field field="IBGESubsetorDesc" selected="True" />
+            <Field field="RaçaCorDesc" selected="True" />
+            <Field field="SexoDesc" selected="True" />
+            <Field field="TipoMov" selected="True" />
+            <Field field="InstruçãoDesc2" selected="True" />
+            <Field field="FaixaEmprDesc2" selected="True" />
+            <Field field="MotivoDesc2" selected="True" />
+            <Field field="IBGESubsetorDesc2" selected="True" />
+            <Field field="RaçaCorDesc2" selected="True" />
+            <Field field="Descrição" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Código" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="Double" />
+            <Field name="Municípios" size="23" source="Formula: DecomposeUnicodeForMatch([Municípios])" type="V_String" />
+            <Field name="UF" size="2" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="String" />
+            <Field name="PIB" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="Double" />
+            <Field name="População" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="Double" />
+            <Field name="UFCod" source="Formula: Left(Trim(ToString([Código])),2)" type="Byte" />
+            <Field name="CódigoMun" source="Formula: ToNumber(Left(Trim(ToString([Código])),6))" type="Double" />
+            <Field name="Right_Código" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="Double" />
+            <Field name="Right_Municípios" size="23" source="Formula: DecomposeUnicodeForMatch([Municípios])" type="V_String" />
+            <Field name="Right_UF" size="2" source="File: odb:Provider=Microsoft.ACE.OLEDB.12.0;User ID=Admin;Data Source=C:\Alteryx\POC\BRPubliC\CidadesALLAccessDB.mdb;Mode=Share Deny None;Extended Properties=&quot;&quot;;Jet OLEDB:System database=&quot;&quot;;Jet OLEDB:Registry Path=&quot;&quot;;Jet OLEDB:Database Password=__EncPwd1__;Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password=__EncPwd1__;Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;Jet OLEDB:Support Complex Data=False;Jet OLEDB:Bypass UserInfo Validation=False|DATA" type="String" />
+            <Field name="Right_UFCod" source="Formula: Left(Trim(ToString([Código])),2)" type="Byte" />
+            <Field name="Right_CódigoMun" source="Formula: ToNumber(Left(Trim(ToString([Código])),6))" type="Double" />
+            <Field name="Admitidos/Desligados" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Competência Declarada" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int32" />
+            <Field name="Município" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int32" />
+            <Field name="Ano Declarado" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int16" />
+            <Field name="CBO 2002 Ocupação" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int32" />
+            <Field name="CNAE 1.0 Classe" size="5" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="CNAE 2.0 Classe" size="5" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="CNAE 2.0 Subclas" size="7" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Faixa Empr Início Jan" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Grau Instrução" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Qtd Hora Contrat" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="IBGE Subsetor" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="Idade" size="3" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Ind Aprendiz" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="Ind Portador Defic" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="Raça Cor" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Salário Mensal" size="9" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Saldo Mov" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Sexo" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Tempo Emprego" size="6" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Tipo Estab" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Tipo Defic" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Tipo Mov Desagregado" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Right_UF2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="Bairros SP" size="4" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Bairros Fortaleza" size="4" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Bairros RJ" size="4" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Distritos SP" size="4" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Regiões Adm DF" size="4" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Mesorregião" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int16" />
+            <Field name="Microrregião" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int32" />
+            <Field name="Região Adm RJ" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Região Adm SP" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int16" />
+            <Field name="Região Corede" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Região Corede 04" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="Região Gov SP" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int16" />
+            <Field name="Região Senac PR" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="Região Senai PR" size="2" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="String" />
+            <Field name="Região Senai SP" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Int16" />
+            <Field name="Sub-Região Senai PR" source="File: C:\Alteryx\POC\BRPublic\Empregos\CAGEDCSV\CAGEDEST_052015.txt" type="Byte" />
+            <Field name="InstruçãoCódigo" source="Formula: ToNumber([Grau Instrução])" type="Int16" />
+            <Field name="IBGESubsetorCodStr" size="2" source="Formula: PadLeft(ToString([IBGE Subsetor]),2,'0')" type="String" />
+            <Field name="IdadeN" source="Formula: ToNumber([Idade])" type="Byte" />
+            <Field name="SalárioMensalN" source="Formula: ToNumber(Replace([Salário Mensal],',','.'))" type="Double" />
+            <Field name="TempoEmpregoN" source="Formula: ToNumber(Replace([Tempo Emprego],',','.'))" type="Double" />
+            <Field name="InstruçãoDesc" size="23" source="TextInput:" type="V_String" />
+            <Field name="FaixaEmprDesc" size="12" source="TextInput:" type="String" />
+            <Field name="MotivoDesc" size="43" source="Formula: DecomposeUnicodeForMatch([MotivoDesc])" type="V_String" />
+            <Field name="IBGESubsetorDesc" size="67" source="Formula: DecomposeUnicodeForMatch([IBGESubsetorDesc])" type="V_String" />
+            <Field name="RaçaCorDesc" size="9" source="Formula: DecomposeUnicodeForMatch([RaçaCorDesc])" type="String" />
+            <Field name="SexoDesc" size="9" source="Formula: IIF([Sexo]=='01','Masculino','Feminino')" type="String" />
+            <Field name="TipoMov" size="8" source="Formula: IIF([Admitidos/Desligados]=='01','Admitido','Demitido')" type="String" />
+            <Field name="InstruçãoDesc2" size="23" source="TextInput:" type="V_String" />
+            <Field name="FaixaEmprDesc2" size="12" source="TextInput:" type="String" />
+            <Field name="MotivoDesc2" size="43" source="TextInput:" type="V_String" />
+            <Field name="IBGESubsetorDesc2" size="67" source="TextInput:" type="V_String" />
+            <Field name="RaçaCorDesc2" size="9" source="TextInput:" type="String" />
+            <Field name="BairroFORCodigo" source="Formula: ToNumber([Bairros Fortaleza])" type="Int32" />
+            <Field name="Descrição" size="26" source="TextInput:" type="V_String" />
+            <Field name="Valor na Fonte" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="330" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Municípios" selected="True" />
+            <SelectField field="UF" selected="True" />
+            <SelectField field="População" selected="True" />
+            <SelectField field="Admitidos/Desligados" selected="True" />
+            <SelectField field="Sexo" selected="True" />
+            <SelectField field="TipoMov" selected="True" />
+            <SelectField field="Cidade" selected="True" />
+            <SelectField field="Tempo Resposta" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="822" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\posgrad\AppData\Local\Temp\Engine_4852_26e6ecd6e3bf4921964e687a4c66c6d9_\Engine_6260_0f7015b24dbe45709b00befa3d01aeff_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="222" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[População] &gt;= 5000 &amp;&amp; [População] &lt;= 50000</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[População] &gt;= 5000 &amp;&amp; [População] &lt;= 50000</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="438" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Municípios" action="GroupBy" rename="Municípios" />
+            <SummarizeField field="TipoMov" action="GroupBy" rename="TipoMov" />
+            <SummarizeField field="Admitidos/Desligados" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="546" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="Municípios" />
+          </GroupFields>
+          <HeaderField field="TipoMov" />
+          <DataField field="Count" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Municípios" size="23" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Admitido" source="CrossTab:Header:TipoMov:Admitido:Sum:" type="Int64" />
+            <Field name="Demitido" source="CrossTab:Header:TipoMov:Demitido:Sum:" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Municípios" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="630" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Numeric</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Admitido" />
+            <Field name="Demitido" />
+            <Field name="*Unknown" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>IF IsNull([_CurrentField_]) THEN 0 ELSE [_CurrentField_] ENDIF</Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IF IsNull([_CurrentField_]) THEN 0 ELSE [_CurrentField_] ENDIF</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="726" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Admitido] - [Demitido]" field="Empregos Gerados" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Empregos Gerados = [Admitido] - [Demitido]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="True" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Cagede_Saldo_Empregos_Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

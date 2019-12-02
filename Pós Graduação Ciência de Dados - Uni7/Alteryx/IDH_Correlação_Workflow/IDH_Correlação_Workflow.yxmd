@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\posgrad\Desktop\Datasets\IDHMBR2010.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IDHMBR2010.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ID" source="File: C:\Alteryx\POC\BRPublic\PMFSDE\estudos\Atlas\Atlas 2013 - IDHM Municipios.xls|`'Var IDH MUN 10$'`" type="Int32" />
+            <Field name="Ano " source="File: C:\Alteryx\POC\BRPublic\PMFSDE\estudos\Atlas\Atlas 2013 - IDHM Municipios.xls|`'Var IDH MUN 10$'`" type="Int16" />
+            <Field name="Código Estado " source="File: C:\Alteryx\POC\BRPublic\PMFSDE\estudos\Atlas\Atlas 2013 - IDHM Municipios.xls|`'Var IDH MUN 10$'`" type="Byte" />
+            <Field name="Nome do Estado" size="19" source="File: C:\Alteryx\POC\BRPublic\PMFSDE\estudos\Atlas\Atlas 2013 - IDHM Municipios.xls|`'Var IDH MUN 10$'`" type="V_String" />
+            <Field name="Código do município" source="File: C:\Alteryx\POC\BRPublic\PMFSDE\estudos\Atlas\Atlas 2013 - IDHM Municipios.xls|`'Var IDH MUN 10$'`" type="Int32" />
+            <Field name="Codmun7" source="File: C:\Alteryx\POC\BRPublic\PMFSDE\estudos\Atlas\Atlas 2013 - IDHM Municipios.xls|`'Var IDH MUN 10$'`" type="Int32" />
+            <Field name=" Nome do Município" size="32" source="File: C:\Alteryx\POC\BRPublic\PMFSDE\estudos\Atlas\Atlas 2013 - IDHM Municipios.xls|`'Var IDH MUN 10$'`" type="V_String" />
+            <Field name="Percentual da população de 5 a 6 anos de idade frequentando a es" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Percentual da população de 11 a 13 anos de idade frequentando os" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Percentual da população de 15 a 17 anos com fundamental completo" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Percentual da população de 18 a 20 anos de idade com o ensino mé" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Subíndice de frequência escolar da população jovem - IDHM Educaç" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Percentual da população de 18 anos ou mais com fundamental compl" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Subíndice de escolaridade fundamental da população adulta - IDHM" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Índice de Desenvolvimento Humano Municipal - Dimensão Educação" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Esperança de vida ao nascer" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Índice de Desenvolvimento Humano Municipal  - Dimensão Longevida" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Renda per capita média" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Índice de Desenvolvimento Humano Municipal - Dimensão Renda" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+            <Field name="Índice de Desenvolvimento Humano Municipal" source="Formula: ReplaceChar(ReplaceChar([_CurrentField_],'.',''),',','.')" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Ano " selected="False" />
+            <SelectField field=" Nome do Município" selected="True" rename="Cidade" />
+            <SelectField field="Código do município" selected="False" />
+            <SelectField field="Código Estado " selected="False" />
+            <SelectField field="Codmun7" selected="False" />
+            <SelectField field="Esperança de vida ao nascer" selected="False" />
+            <SelectField field="ID" selected="False" />
+            <SelectField field="Índice de Desenvolvimento Humano Municipal - Dimensão Educação" selected="True" rename="IDH_Educação" />
+            <SelectField field="Índice de Desenvolvimento Humano Municipal  - Dimensão Longevida" selected="True" rename="IDH_Longevidade" />
+            <SelectField field="Índice de Desenvolvimento Humano Municipal" selected="True" />
+            <SelectField field="Índice de Desenvolvimento Humano Municipal - Dimensão Renda" selected="True" />
+            <SelectField field="Nome do Estado" selected="False" />
+            <SelectField field="Percentual da população de 11 a 13 anos de idade frequentando os" selected="True" rename="Perc_Escola_11_13" />
+            <SelectField field="Percentual da população de 15 a 17 anos com fundamental completo" selected="True" rename="Perc_Escola_15_17" />
+            <SelectField field="Percentual da população de 5 a 6 anos de idade frequentando a es" selected="True" rename="Perc_Escola_5_6" />
+            <SelectField field="Percentual da população de 18 a 20 anos de idade com o ensino mé" selected="False" />
+            <SelectField field="Percentual da população de 18 anos ou mais com fundamental compl" selected="False" />
+            <SelectField field="Renda per capita média" selected="True" rename="Renda_Per_Capita" />
+            <SelectField field="Subíndice de escolaridade fundamental da população adulta - IDHM" selected="False" />
+            <SelectField field="Subíndice de frequência escolar da população jovem - IDHM Educaç" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings>
+        <Position x="294" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="do target">False</Value>
+          <Value name="target">Cidade</Value>
+          <Value name="target level" />
+          <Value name="use fields">"IDH_Educação","IDH_Longevidade","Índice de Desenvolvimento Humano Municipal","Índice de Desenvolvimento Humano Municipal - Dimensão Renda","Perc_Escola_11_13","Perc_Escola_15_17","Perc_Escola_5_6","Renda_Per_Capita"</Value>
+          <Value name="Pearson">True</Value>
+          <Value name="Spearman">False</Value>
+          <Value name="Hoeffding">False</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Association_Analysis.yxmc" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="390" y="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\posgrad\AppData\Local\Temp\Engine_216_a94ae7384c074d93b461a283616ab91d_\Engine_11188_326bd901a35e4608bc56bd591e061b64_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="390" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\posgrad\AppData\Local\Temp\Engine_216_a94ae7384c074d93b461a283616ab91d_\Engine_11188_91df8dc700c04445b0361681fdd1d094_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Data Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Correlation Matrix" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>IDH_Correlação_Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
